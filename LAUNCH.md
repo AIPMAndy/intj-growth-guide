@@ -6,7 +6,8 @@
 - [x] 可搜索、筛选、收藏、完成标记与微信复制
 - [x] 作品风险提醒与反方审查
 - [x] 作者网站及咨询服务入口
-- [ ] 通过 GitHub Pages 设置并验证真实在线地址
+- [x] GitHub Pages 已通过 Actions 发布成功（[部署记录](https://github.com/AIPMAndy/intj-growth-guide/actions/runs/39141847219)）
+- [ ] 外部浏览器分别确认首页、完整攻略与互动计划正常显示
 - [ ] GitHub 仓库 About / Topics 设置
 - [ ] 真实用户试读反馈与内容纠错
 

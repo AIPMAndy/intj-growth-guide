@@ -12,7 +12,7 @@
 
 **[互动网站](https://aipmandy.github.io/intj-growth-guide/)** · [41 部作品完整攻略](article.html) · [7 天 / 30 天互动计划](plan.html) · [全部结构化数据](data/catalog.json)
 
-> GitHub Pages 需先在 Settings → Pages 设置 Deploy from a branch / main / root。未显示部署成功前请先通过仓库中的 HTML 预览。
+> 网站通过 [GitHub Actions 自动部署](.github/workflows/deploy-pages.yml)。每次推送到 main 会重新发布。若无法访问，请先查看 [Pages 部署记录](https://github.com/AIPMAndy/intj-growth-guide/actions/workflows/deploy-pages.yml)。
 
 ## 书影音清单
 
