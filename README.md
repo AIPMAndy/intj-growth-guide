@@ -4,6 +4,10 @@
 
 **作者 AI 酋长 Andy** · [个人网站](https://metaver.vip/) · [职业咨询与 AI 成长陪跑](https://metaver.vip/services) · 微信 `AIPMAndy`
 
+![INTJ 成长必看书影音图鉴](assets/social-preview.svg)
+
+**[从这里开始｜10 分钟找到第一部作品](START-HERE.md)**
+
 ## 🌐 在线阅读
 
 **[互动网站](https://aipmandy.github.io/intj-growth-guide/)** · [41 部作品完整攻略](article.html) · [7 天 / 30 天互动计划](plan.html) · [全部结构化数据](data/catalog.json)
