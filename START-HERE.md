@@ -2,7 +2,7 @@
 
 **第一步：选一个问题。** 此刻最影响你的是什么？例如：做决策只找支持观点的材料；团队沟通不顺；目标太多迟迟不动；总拿一次失败定义自己。
 
-**第二步：只选一部。** 在 [互动网站](index.html) 的成长维度筛选中选一部。没有必要一次读完十本。
+**第二步：只选一部。** 在 [互动网站](https://aipmandy.github.io/intj-growth-guide/) 的成长维度筛选中选一部。没有必要一次读完十本。
 
 **第三步：先写一个预测。** 预计从这部作品里学到什么？用 [笔记模板](templates/notes-template.md) 记下来。
 
@@ -20,4 +20,4 @@
 | 容易陷入局部优化 | 《系统之美》 | 画出一个现实问题的反馈回路 |
 | 工作挤压生活 | 《四千周》 | 主动停止一个低价值承诺 |
 
-下一步：[7 天计划](guides/7-day-starter.md) · [30 天计划](guides/30-day-growth-plan.md) · [可勾选的训练网页](plan.html)
+下一步：[7 天计划](guides/7-day-starter.md) · [30 天计划](guides/30-day-growth-plan.md) · [可勾选的训练网页](https://aipmandy.github.io/intj-growth-guide/plan.html)

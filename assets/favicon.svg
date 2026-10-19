@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="INTJ ATLAS">
+  <rect width="64" height="64" fill="#12222f"/>
+  <rect x="4" y="4" width="56" height="56" fill="none" stroke="#c8a670" stroke-width="2"/>
+  <text x="32" y="47" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="38" fill="#e6c99b">I</text>
+  <text x="49" y="19" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#c8a670">✦</text>
+</svg>

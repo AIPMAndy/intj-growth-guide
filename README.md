@@ -1,20 +1,42 @@
 # INTJ 成长必看书影音图鉴
 
-> 41 部电影、电视剧、书籍与纪录片，六个成长维度。看完就能练，读完就能用。
+> 41 部电影、电视剧、书籍与纪录片，六条成长路线。看完就能练，读完就能用。
+
+[![Deploy](https://github.com/AIPMAndy/intj-growth-guide/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/AIPMAndy/intj-growth-guide/actions/workflows/deploy-pages.yml)
+[![Validate](https://github.com/AIPMAndy/intj-growth-guide/actions/workflows/check.yml/badge.svg)](https://github.com/AIPMAndy/intj-growth-guide/actions/workflows/check.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-c39a63.svg)](LICENSE)
+[![Static site](https://img.shields.io/badge/stack-HTML%20%2F%20CSS%20%2F%20JS-101b27.svg)](#技术选择)
 
 **作者 AI 酋长 Andy** · [个人网站](https://metaver.vip/) · [职业咨询与 AI 成长陪跑](https://metaver.vip/services) · 微信 `AIPMAndy`
 
-![INTJ 成长必看书影音图鉴](assets/social-preview.svg)
+![INTJ 成长必看书影音图鉴](assets/social-preview.png)
 
-**[从这里开始｜10 分钟找到第一部作品](START-HERE.md)**
+**[从这里开始｜10 分钟找到第一部作品](START-HERE.md)** · **[在线阅读](https://aipmandy.github.io/intj-growth-guide/)**
 
-## 🌐 在线阅读
+## 目录
 
-**[互动网站](https://aipmandy.github.io/intj-growth-guide/)** · [41 部作品完整攻略](article.html) · [7 天 / 30 天互动计划](plan.html) · [全部结构化数据](data/catalog.json)
+- [在线阅读](#在线阅读)
+- [清单概览](#清单概览)
+- [怎么用](#怎么用)
+- [配套资源](#配套资源)
+- [项目结构](#项目结构)
+- [本地开发](#本地开发)
+- [技术选择](#技术选择)
+- [参与共建](#参与共建)
+- [人格类型与版权](#人格类型与版权)
 
-> 网站通过 [GitHub Actions 自动部署](.github/workflows/deploy-pages.yml)。每次推送到 main 会重新发布。若无法访问，请先查看 [Pages 部署记录](https://github.com/AIPMAndy/intj-growth-guide/actions/workflows/deploy-pages.yml)。
+## 在线阅读
 
-## 书影音清单
+| 页面 | 内容 | 地址 |
+| --- | --- | --- |
+| 互动首页 | 搜索、四类媒介与六个维度筛选、收藏与进度 | [aipmandy.github.io/intj-growth-guide](https://aipmandy.github.io/intj-growth-guide/) |
+| 完整攻略 | 41 篇解读：为什么看、核心收获、看完怎么用、别学偏了 | [article.html](https://aipmandy.github.io/intj-growth-guide/article.html) |
+| 成长计划 | 7 天起步与 30 天训练，任务可勾选、记录可导出 | [plan.html](https://aipmandy.github.io/intj-growth-guide/plan.html) |
+| 结构化数据 | 41 条完整条目，可直接复用或二次开发 | [data/catalog.json](data/catalog.json) |
+
+网站通过 [GitHub Actions](.github/workflows/deploy-pages.yml) 自动部署：每次推送到 `main` 先跑构建一致性检查与测试，通过后才发布。若页面异常，请先看 [部署记录](https://github.com/AIPMAndy/intj-growth-guide/actions/workflows/deploy-pages.yml)。
+
+## 清单概览
 
 | 分类 | 数量 | 代表作品 |
 | --- | ---: | --- |
@@ -26,63 +48,97 @@
 
 六条路线：**决策判断、系统思维、职业与商业、沟通与关系、情绪与自洽、执行与成长**。
 
-## 保姆级使用方式
+## 怎么用
 
-1. 打开 [互动网站](index.html)，先选择最需要改善的成长维度，再按照问题筛选作品。
-2. 点击作品详情，先读**为什么看、核心收获、看完怎么用、别学偏了**四个部分。
-3. 用 [一页笔记模板](templates/notes-template.md) 把收获转化为现实行动。
-4. 跟着 [7 天路线](guides/7-day-starter.md) 或 [30 天成长路线](guides/30-day-growth-plan.md) 实践。
-5. 用 [每周复盘模板](templates/weekly-review.md) 记录客观证据，再决定是否调整。
+1. 打开[互动网站](https://aipmandy.github.io/intj-growth-guide/)，先选择最需要改善的成长维度，再按具体问题筛选作品。
+2. 点开作品详情，先读**为什么看、核心收获、看完怎么用、别学偏了**四个部分。
+3. 用[一页笔记模板](templates/notes-template.md)把收获转成现实行动。
+4. 跟着[7 天路线](guides/7-day-starter.md)或[30 天成长路线](guides/30-day-growth-plan.md)实践。
+5. 用[每周复盘模板](templates/weekly-review.md)记录客观证据，再决定是否调整。
 
-## 网站功能
+原则只有一条：**先选问题，再选作品；每次只练一个动作。**
 
-- 中文片名、英文作品名及关键词即时搜索
-- 4 种媒介、6 类成长维度与阅读难度筛选
-- 收藏、标记完成、本地进度条与随机推荐
-- 41 篇作品解读汇成可离线打开的完整攻略页
-- 独立的 7 天 / 30 天可勾选实践页，行动记录可导出
-- 无第三方 CDN、无账号、无需后端；移动端适配
-- 个人网站 / 服务页 / 微信 AIPMAndy 入口
+## 配套资源
 
-**隐私：** 阅读进度只保存在当前浏览器 localStorage，清理缓存、换设备或私密浏览可能丢失。网站不采集用户账号和私密数据。
+| 资源 | 用途 |
+| --- | --- |
+| [START-HERE.md](START-HERE.md) | 10 分钟起步：一个问题、一部作品、一个动作 |
+| [guides/7-day-starter.md](guides/7-day-starter.md) | 7 天轻量起步路线 |
+| [guides/30-day-growth-plan.md](guides/30-day-growth-plan.md) | 30 天四周训练路径 |
+| [guides/reading-method.md](guides/reading-method.md) | 15 分钟行动卡：看完只回答四个问题 |
+| [templates/notes-template.md](templates/notes-template.md) | 一页作品行动笔记 |
+| [templates/weekly-review.md](templates/weekly-review.md) | 每周复盘：证据、反方视角、下一步 |
+| [plan.html](https://aipmandy.github.io/intj-growth-guide/plan.html) | 可勾选计划页，进度存本机，可导出 Markdown |
+| [docs/SELECTION.md](docs/SELECTION.md) | 收录标准：为什么不按榜单排序 |
+| [docs/SOURCES.md](docs/SOURCES.md) | 来源、内容边界与维护规则 |
+| [docs/ADVERSARIAL_REVIEW.md](docs/ADVERSARIAL_REVIEW.md) | 反方审核：人格决定论、把剧本当管理学等风险 |
+| [docs/PUBLISH.md](docs/PUBLISH.md) | 发布与回滚手册 |
 
 ## 项目结构
 
 ```text
-├── index.html               # 单文件交互首页
-├── article.html             # 41 部作品深度解读
-├── plan.html                # 7/30 天可勾选成长计划
-├── data/catalog.json        # 41 条完整结构化条目
-├── site/                    # 可维护的网站样式、模板与脚本
-├── guides/                  # 新手路线、系统成长及阅读方法
-├── templates/               # 书影音笔记、每周复盘
-├── docs/                    # 方法、来源、上线手册与审核
-├── assets/                  # 原创视觉封面
-├── scripts/build.py         # 重新生成独立首页
-├── tests/test_content.py    # 内容与构建基础检验
-├── .github/workflows/check.yml
+├── index.html                  # 由 site/ 生成的单文件交互首页
+├── article.html                # 41 部作品深度解读（手工维护）
+├── plan.html                   # 7/30 天可勾选计划（手工维护）
+├── 404.html                    # GitHub Pages 自定义 404
+├── data/catalog.json           # 41 条结构化条目（内容真源）
+├── site/                       # 首页的样式、模板与脚本
+├── guides/                     # 起步路线、30 天计划与阅读方法
+├── templates/                  # 作品笔记与每周复盘模板
+├── docs/                       # 收录标准、来源、上线手册与反方审核
+├── assets/                     # 社交预览图（SVG + PNG）与站点图标
+├── scripts/
+│   ├── build.py                # 生成 index.html，--check 供 CI 校验
+│   └── check.py                # 一键跑完本地全部检查
+├── tests/
+│   ├── test_content.py         # 条目字段、分布、文本质量与构建一致性
+│   └── test_site.py            # 元信息、图标、内链锚点、sitemap 与配套文件
+├── sitemap.xml · robots.txt
+├── .github/
+│   ├── workflows/check.yml     # 推送与 PR 校验
+│   ├── workflows/deploy-pages.yml
+│   ├── ISSUE_TEMPLATE/         # 作品推荐与内容纠错表单
+│   └── PULL_REQUEST_TEMPLATE.md
 ├── LICENSE
 └── CONTRIBUTING.md
 ```
 
-## 本地运行与修改
+## 本地开发
 
-安装 Python 3.9+ 即可，无须安装依赖。
+只需 Python 3.9+，没有第三方依赖。
 
 ```bash
-python3 scripts/build.py
-python3 -m unittest discover -s tests -v
-python3 -m http.server 8000
+python3 scripts/build.py     # 修改 data/ 或 site/ 后重新生成 index.html
+python3 scripts/check.py     # 构建一致性 + 全部测试
+python3 -m http.server 8000  # 本地预览 http://localhost:8000/
 ```
 
-访问 http://localhost:8000/ 。修改 `data/catalog.json` 和 `site/` 内容后重新构建 `index.html`。详细见 [发布手册](docs/PUBLISH.md)。
+改内容时只需动 `data/catalog.json`；改样式或交互时动 `site/`，然后重新构建。**不要手改 `index.html`**，它会被下次构建覆盖。详细流程见[发布手册](docs/PUBLISH.md)。
 
-## 关于人格类型与版权
+## 技术选择
 
-INTJ 在这里是一个组织阅读主题的标签。MBTI 类型不能可靠地预测个人能力、工作表现或人生走向，不建议将作品人物直接判定为 INTJ。所有解读和实践练习属于编辑性建议，不构成医学或心理治疗方案。
+- 纯静态：无框架、无构建服务、无第三方 CDN，克隆即可打开。
+- 隐私优先：阅读进度与计划勾选只存在浏览器 localStorage，不采集账号与行为。
+- 内容与展示分离：条目在 JSON 里，页面由脚本生成，改内容不必碰 HTML。
+- 有测试的静态站：条目字段、元信息、图标尺寸、内链锚点、sitemap 都由测试守住。
+- 可访问性基础：跳转链接、语义化标题层级、`aria-pressed` 状态、键盘可操作的对话框。
 
-本仓库不提供盗版影视、电子书下载；片名、书名、原作者用于作品识别，作品相关权利归权利人所有。仓库原创代码、编辑内容和原创插画采用 [MIT License](LICENSE)，保留署名及版权声明。
+## 参与共建
 
-欢迎提交 Issue 与 Pull Request 补充作品，详见 [CONTRIBUTING.md](CONTRIBUTING.md)。欢迎 Star ⭐、Fork 与分享！
+欢迎提交 Issue 与 Pull Request 补充作品、纠错或改进配套：
+
+- 推荐作品：[作品推荐表单](https://github.com/AIPMAndy/intj-growth-guide/issues/new?template=suggest-work.yml)
+- 内容纠错：[纠错表单](https://github.com/AIPMAndy/intj-growth-guide/issues/new?template=fix-content.yml)
+- 提交代码前请读 [CONTRIBUTING.md](CONTRIBUTING.md)，并跑一次 `python3 scripts/check.py`
+
+欢迎 Star ⭐、Fork 与分享。
+
+## 人格类型与版权
+
+INTJ 在这里只是组织阅读主题的标签。MBTI 类型不能可靠地预测个人能力、工作表现或人生走向，不建议将作品人物直接判定为 INTJ。所有解读和实践练习属于编辑性建议，不构成医学或心理治疗方案。
+
+本仓库不提供盗版影视、电子书下载；片名、书名、原作者仅用于作品识别，相关权利归权利人所有。仓库原创代码、编辑内容和原创插画采用 [MIT License](LICENSE)，保留署名及版权声明。
+
+---
 
 **AI 酋长 Andy** · [metaver.vip](https://metaver.vip/) · 微信 `AIPMAndy`

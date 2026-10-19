@@ -1,1 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="INTJ 成长必看书影音图鉴"><defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101c2b"/><stop offset="1" stop-color="#253b49"/></linearGradient></defs><rect width="1200" height="630" fill="url(#b)"/><circle cx="1100" cy="-40" r="450" fill="none" stroke="#c7a472" stroke-opacity=".22" stroke-width="2"/><circle cx="1100" cy="-40" r="320" fill="none" stroke="#c7a472" stroke-opacity=".28" stroke-width="2"/><path d="M0 545L1200 370" stroke="#c7a472" stroke-opacity=".22"/><text x="85" y="108" fill="#d7ba8c" font-family="Arial,sans-serif" letter-spacing="7" font-size="26">INTJ · GROWTH ATLAS</text><text x="75" y="265" fill="#ffffff" font-family="PingFang SC,Noto Sans CJK SC,sans-serif" font-size="72" font-weight="700">INTJ 成长必看</text><text x="75" y="362" fill="#e7cb9d" font-family="PingFang SC,Noto Sans CJK SC,sans-serif" font-size="78" font-weight="700">书影音图鉴</text><text x="84" y="445" fill="#cbd5dc" font-family="PingFang SC,Noto Sans CJK SC,sans-serif" font-size="26">41 部作品  ·  6 个成长维度  ·  可执行练习</text><path d="M85 494H1112" stroke="#d9b78a" stroke-opacity=".55"/><text x="86" y="550" fill="#eee5da" font-family="PingFang SC,Noto Sans CJK SC,sans-serif" font-size="23">AI 酋长 Andy</text><text x="890" y="550" fill="#d7ba8c" font-family="Arial,sans-serif" font-size="21">metaver.vip</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="INTJ 成长必看书影音图鉴：41 部作品，六条成长路线">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0d1a26"/>
+      <stop offset=".55" stop-color="#142633"/>
+      <stop offset="1" stop-color="#1e3542"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#e8cda0"/>
+      <stop offset="1" stop-color="#c39a63"/>
+    </linearGradient>
+    <pattern id="grain" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".6" fill="#ffffff" opacity=".035"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grain)"/>
+
+  <g fill="none" stroke="#c8a670">
+    <circle cx="1085" cy="-70" r="430" opacity=".16" stroke-width="1.2"/>
+    <circle cx="1085" cy="-70" r="320" opacity=".2" stroke-width="1.2"/>
+    <circle cx="1085" cy="-70" r="210" opacity=".24" stroke-width="1.2"/>
+    <path d="M0 566 L1200 372" opacity=".16" stroke-width="1"/>
+  </g>
+
+  <text x="1035" y="452" font-family="'Songti SC','Noto Serif CJK SC',STSong,serif" font-size="300" font-weight="500" fill="#e2c193" opacity=".12" text-anchor="middle">41</text>
+
+  <g font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+    <text x="80" y="102" font-size="17" letter-spacing="5" fill="#c9a978">INTJ · GROWTH ATLAS</text>
+    <text x="405" y="102" font-size="14" letter-spacing="2" fill="#7f919c">/ 2026 EDITION</text>
+
+    <text x="78" y="212" font-family="'Songti SC','Noto Serif CJK SC',STSong,serif" font-size="86" font-weight="500" letter-spacing="1" fill="#f5f0e7">INTJ 成长必看</text>
+    <text x="78" y="312" font-family="'Songti SC','Noto Serif CJK SC',STSong,serif" font-size="86" font-weight="500" letter-spacing="1" fill="url(#gold)">书影音图鉴</text>
+
+    <text x="80" y="374" font-size="23" fill="#a9bac4">41 部作品 · 6 条成长路线 · 每条都配一个能立刻执行的练习</text>
+
+    <g font-size="16" fill="#d6c3a2">
+      <g stroke="#c8a670" stroke-opacity=".45" fill="none">
+        <rect x="80" y="410" width="112" height="38" rx="19"/>
+        <rect x="202" y="410" width="112" height="38" rx="19"/>
+        <rect x="324" y="410" width="132" height="38" rx="19"/>
+        <rect x="466" y="410" width="132" height="38" rx="19"/>
+        <rect x="608" y="410" width="132" height="38" rx="19"/>
+        <rect x="750" y="410" width="132" height="38" rx="19"/>
+      </g>
+      <text x="136" y="435" text-anchor="middle">决策判断</text>
+      <text x="258" y="435" text-anchor="middle">系统思维</text>
+      <text x="390" y="435" text-anchor="middle">职业与商业</text>
+      <text x="532" y="435" text-anchor="middle">沟通与关系</text>
+      <text x="674" y="435" text-anchor="middle">情绪与自洽</text>
+      <text x="816" y="435" text-anchor="middle">执行与成长</text>
+    </g>
+
+    <path d="M80 508 H1120" stroke="#ffffff" stroke-opacity=".16"/>
+
+    <text x="80" y="556" font-size="21" fill="#cfd8dd">AI 酋长 Andy</text>
+    <text x="300" y="556" font-size="19" fill="#7f919c">职业咨询 · AI 成长陪跑</text>
+    <text x="1120" y="556" font-size="20" fill="#c9a978" text-anchor="end">metaver.vip</text>
+  </g>
+</svg>

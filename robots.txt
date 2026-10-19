@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aipmandy.github.io/intj-growth-guide/sitemap.xml
