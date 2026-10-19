@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 先读使用说明
+    url: https://github.com/AIPMAndy/intj-growth-guide/blob/main/START-HERE.md
+    about: 不知道从哪部作品开始，先看这份 10 分钟起步说明。
+  - name: 在线阅读与完整攻略
+    url: https://aipmandy.github.io/intj-growth-guide/
+    about: 网站、41 部作品攻略与 7 天 / 30 天计划都在这里。

@@ -1,15 +1,33 @@
 name: Validate INTJ Guide
+
 on:
   push:
+    branches: [main]
   pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   check:
+    name: Build and test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
-      - run: python3 scripts/build.py
-      - run: python3 -m unittest discover -s tests -v
-      - run: git diff --exit-code -- index.html
+          python-version: "3.11"
+
+      - name: Verify index.html is up to date
+        run: python3 scripts/build.py --check
+
+      - name: Run content and site tests
+        run: python3 -m unittest discover -s tests -v

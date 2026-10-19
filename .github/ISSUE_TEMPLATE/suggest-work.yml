@@ -1,0 +1,92 @@
+name: 推荐一部作品
+description: 建议加入清单的电影、剧集、书籍或纪录片。请尽量给出可核验的信息。
+title: "[作品推荐] "
+labels: ["content: suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢共建。收录标准不是"有名"，而是**能否解决一个现实问题，并给出可执行的练习**。
+        提交前请先读 [推荐选择方法](https://github.com/AIPMAndy/intj-growth-guide/blob/main/docs/SELECTION.md)。
+  - type: input
+    id: title
+    attributes:
+      label: 中文标题
+      placeholder: 例如：系统之美
+    validations:
+      required: true
+  - type: input
+    id: original
+    attributes:
+      label: 原名 / 英文名
+      placeholder: Thinking in Systems
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 类型
+      options:
+        - 电影 film
+        - 电视剧 series
+        - 书籍 book
+        - 纪录片 doc
+    validations:
+      required: true
+  - type: input
+    id: meta
+    attributes:
+      label: 年份与创作者
+      placeholder: 2008 · Donella Meadows
+    validations:
+      required: true
+  - type: dropdown
+    id: theme
+    attributes:
+      label: 对应的成长维度
+      options:
+        - 决策判断
+        - 系统思维
+        - 职业与商业
+        - 沟通与关系
+        - 情绪与自洽
+        - 执行与成长
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: 为什么值得看（40 字以内）
+      description: 说清它对应哪一个现实高频难题，避免"经典必看"这类空话。
+    validations:
+      required: true
+  - type: textarea
+    id: action
+    attributes:
+      label: 看完能做的一件事
+      description: 15 分钟内可以启动的具体动作，最好有可观察的结果。
+    validations:
+      required: true
+  - type: textarea
+    id: pitfall
+    attributes:
+      label: 容易学偏的地方
+      description: 这部作品最容易被误读成什么？给出反例或边界。
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: 信息来源
+      description: 出版方、发行方、IMDb、出版社官网等可核验链接。
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 提交确认
+      options:
+        - label: 我没有附上盗版下载、在线播放或整段受版权保护的文本。
+          required: true
+        - label: 我理解收录决定由维护者判断，未收录不等于作品不好。
+          required: true
