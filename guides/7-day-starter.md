@@ -8,4 +8,4 @@
 6. 第 6 天：和一名可信任的人交换反馈，特别关注与你相反的解释。
 7. 第 7 天：根据证据保留或放弃这次行为实验，确定下一周的具体动作。
 
-配合 [可交互计划网页](../plan.html) 和 [一页笔记](../templates/notes-template.md) 使用。
+配合 [可交互计划网页](https://aipmandy.github.io/intj-growth-guide/plan.html) 和 [一页笔记](../templates/notes-template.md) 使用。

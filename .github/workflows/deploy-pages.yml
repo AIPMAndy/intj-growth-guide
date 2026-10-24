@@ -15,8 +15,27 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  validate:
+    name: Validate before deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Verify index.html is up to date
+        run: python3 scripts/build.py --check
+
+      - name: Run content and site tests
+        run: python3 -m unittest discover -s tests -v
+
   deploy:
     name: Publish static website
+    needs: validate
     runs-on: ubuntu-latest
     environment:
       name: github-pages

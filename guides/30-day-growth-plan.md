@@ -15,4 +15,4 @@
 ## 第 30 天
 对比开始时写下的问题，判断事实是否改善；若没有，修订行动方案，而非简单责备自己。
 
-也可以使用 [30 天互动任务](../plan.html)。
+也可以使用 [30 天互动任务](https://aipmandy.github.io/intj-growth-guide/plan.html)。

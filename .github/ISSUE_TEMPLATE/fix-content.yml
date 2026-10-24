@@ -1,0 +1,47 @@
+name: 内容纠错
+description: 报告事实错误、失效链接、表述风险或练习设计问题。
+title: "[纠错] "
+labels: ["content: fix"]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: 出问题的位置
+      description: 页面地址或作品名，例如 article.html#book-systems。
+      placeholder: https://aipmandy.github.io/intj-growth-guide/article.html#book-systems
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: 问题类型
+      options:
+        - 事实错误（年份、创作者、作品名）
+        - 链接失效
+        - 表述可能造成误导
+        - 练习不可执行
+        - 错别字或排版
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: 现在写的是什么
+      description: 直接引用原文，便于定位。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 建议改成什么
+      description: 请附依据。事实类问题优先给官方或权威来源。
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 提交确认
+      options:
+        - label: 我已确认这不是重复 Issue。
+          required: true

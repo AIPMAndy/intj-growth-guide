@@ -1,0 +1,17 @@
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.woff2 binary
+*.svg text eol=lf
+*.html text eol=lf
+*.py text eol=lf
+
+# Keep generated pages out of language statistics noise
+index.html linguist-generated=true
+article.html linguist-documentation=true
+plan.html linguist-documentation=true
+guides/*.md linguist-documentation=true
+docs/*.md linguist-documentation=true
+templates/*.md linguist-documentation=true
