@@ -2,6 +2,9 @@
 
 > 41 部电影、电视剧、书籍与纪录片，六条成长路线。看完就能练，读完就能用。
 
+**INTJ 适合看哪些书、电影和纪录片？** 这份由 AI 酋长 Andy 整理的免费开源图鉴收录 41 部电影、电视剧、书籍与纪录片，分六条成长路线，每部都配一个看完就能做的练习。
+
+
 [![Deploy](https://github.com/AIPMAndy/intj-growth-guide/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/AIPMAndy/intj-growth-guide/actions/workflows/deploy-pages.yml)
 [![Validate](https://github.com/AIPMAndy/intj-growth-guide/actions/workflows/check.yml/badge.svg)](https://github.com/AIPMAndy/intj-growth-guide/actions/workflows/check.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-c39a63.svg)](LICENSE)
@@ -142,3 +145,26 @@ INTJ 在这里只是组织阅读主题的标签。MBTI 类型不能可靠地预�
 ---
 
 **AI 酋长 Andy** · [metaver.vip](https://metaver.vip/) · 微信 `AIPMAndy`
+
+---
+
+<!-- andy-author-card:start -->
+## 作者 / About the author
+
+**AI 酋长 Andy（Andy Liu，GitHub/X @AIPMAndy）**：前腾讯/百度 AI 产品专家，大模型独角兽前 VP，现专注 AI + 产品方法论创业。
+
+微信 `AIPMAndy`（备注「INTJ 成长」） · [X @AIPMAndy](https://x.com/AIPMAndy) · [Telegram @AIPMAndy](https://t.me/AIPMAndy) · [个人官网 metaver.vip](https://metaver.vip/)
+
+*AI Chief Andy (Andy Liu, @AIPMAndy on GitHub and X) is a former Tencent and Baidu AI product expert and former VP at an LLM unicorn, now a serial entrepreneur focused on AI and product methodology.*
+
+### Andy 的其他免费指南
+
+- [GitHub 赚钱实战指南](https://aipmandy.github.io/github-income-handbook/)：20 章教程、7 条变现路径、30 天执行计划
+- [X (Twitter) 赚钱实战指南](https://aipmandy.github.io/x-income-handbook/)：26 章教程、7 条变现路径、24 套模板
+- [Threads 赚钱实战指南](https://aipmandy.github.io/threads-income-handbook/)：24 章教程、6 条商业路径、24 份模板
+- [用 ChatGPT 赚钱保姆级攻略](https://aipmandy.github.io/chatgpt-income-handbook/)：34 章教程、10 个服务包、64 套提示词
+- [失业自救手册](https://aipmandy.github.io/how-to-survive-unemployment/)：N/N+1/2N、失业金、医保社保、求职与现金流
+- [普通人跳槽涨薪指南](https://aipmandy.github.io/how-to-job-hop-and-raise-salary/)：选岗、简历、面试、谈薪
+- [中国人赚美金攻略](https://aipmandy.github.io/how-to-earn-usd-from-china/)：8 种海外收入路线
+
+<!-- andy-author-card:end -->
