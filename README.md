@@ -148,6 +148,11 @@ INTJ 在这里只是组织阅读主题的标签。MBTI 类型不能可靠地预�
 
 ---
 
+## 说明
+
+NOTE: Rights to referenced films, series, books and documentaries remain with
+their respective owners and are not licensed by this project.
+
 <!-- andy-author-card:start -->
 ## 作者 / About the author
 
