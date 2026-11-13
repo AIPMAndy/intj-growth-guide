@@ -1,0 +1,30 @@
+{
+  "repo": "intj-growth-guide",
+  "title": "INTJ 成长书影音图鉴",
+  "date": "2026-11-13",
+  "source_commit": "1e2e25094999e8384e9cfeffd6b42506cfaead2b",
+  "pages": 45,
+  "sections": 12,
+  "source_files": [
+    "START-HERE.md",
+    "guides/reading-method.md",
+    "guides/7-day-starter.md",
+    "guides/30-day-growth-plan.md",
+    "templates/notes-template.md",
+    "templates/weekly-review.md",
+    "docs/SOURCES.md",
+    "data/catalog.json"
+  ],
+  "website": "https://aipmandy.github.io/intj-growth-guide/",
+  "bytes": 730691,
+  "sha256": "e149b987399f61e0f0b7083de6dfcdc382fd80ec829dd9a66767ab8bcf6e7461",
+  "pdf_path": "pdf/intj-growth-guide-guide.pdf",
+  "contacts": {
+    "personal_website": "https://metaver.vip/",
+    "company_website": "https://www.a6no1.cn/",
+    "wechat": "AIPMAndy",
+    "public_account": "AI 酋长 Andy"
+  },
+  "edition": "A5 · 黑白金实操系列 · PDF 2026.11",
+  "notes": "PDF编排日期不代表所有外部政策与价格的重新核验日期。源文件许可与案例标注继续适用。"
+}
