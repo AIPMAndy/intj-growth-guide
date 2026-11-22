@@ -26,5 +26,6 @@ data.forEach(record=>{const row=document.createElement("div");row.className="rec
 function csvCell(v){let s=String(v??"");if(/^[\s]*[=+\-@]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"'}
 q("export").addEventListener("click",()=>{const data=list();if(!data.length){notify("historyStatus","暂无记录可以导出");return}const cols=["created","question","optionA","optionB","aScore","bScore","evidence","falsifier","experiment"];const csv="\uFEFF"+[cols.join(","),...data.map(row=>cols.map(c=>csvCell(row[c])).join(","))].join("\r\n");const url=URL.createObjectURL(new Blob([csv],{type:"text/csv;charset=utf-8"}));const a=document.createElement("a");a.href=url;a.download="INTJ-决策反证记录.csv";document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);notify("historyStatus","已发起 CSV 下载，请自行妥善保管。")});
 q("clear").addEventListener("click",()=>{if(!list().length)return;if(!confirm("永久清空当前浏览器内全部决策记录？不可恢复。"))return;try{store([]);render();notify("historyStatus","全部本机记录已清空")}catch(_){notify("historyStatus","清空失败：浏览器存储不可用")}});
+q("copyWechat").addEventListener("click",async()=>{try{await navigator.clipboard.writeText("AIPMAndy");notify("copyState","已复制微信号")}catch(_){notify("copyState","自动复制失败，请手动复制 AIPMAndy")}});
 render();
 })();
