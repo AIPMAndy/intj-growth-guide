@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>决策反证工作台｜INTJ ATLAS · AI 酋长 Andy</title>
+<meta name="description" content="免费本机决策反证工作台：为两个备选方案逐项记录证据、主观评分和权重，计算透明的比较结果，形成可验证的下一步实验。记录只保存在浏览器，可安全导出 CSV，不预测人生结果。">
+<meta name="author" content="AI 酋长 Andy">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#171d26">
+<link rel="canonical" href="https://aipmandy.github.io/intj-growth-guide/decision.html">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="决策反证工作台｜INTJ ATLAS">
+<meta property="og:description" content="用事实、反证与可逆的小实验比较两个备选方案，不用人格标签替你做决定。">
+<meta property="og:url" content="https://aipmandy.github.io/intj-growth-guide/decision.html">
+<meta property="og:image" content="https://aipmandy.github.io/intj-growth-guide/assets/social-preview.png">
+<meta property="og:locale" content="zh_CN">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"INTJ 决策反证工作台","url":"https://aipmandy.github.io/intj-growth-guide/decision.html","description":"用户自行赋分的双方案决策矩阵与反证记录工具，结果仅为偏好比较，并非成功概率。","applicationCategory":"ProductivityApplication","operatingSystem":"Any","inLanguage":"zh-CN","isAccessibleForFree":true,"author":{"@type":"Person","name":"AI 酋长 Andy","url":"https://metaver.vip/"},"publisher":{"@type":"Organization","name":"星觉科技","url":"https://www.a6no1.cn/"},"dateModified":"2026-11-23"}</script>
+<style>
+:root{color-scheme:light;--ink:#1d232b;--muted:#5d6773;--line:#dce0e2;--bg:#f6f6f4;--card:#fff;--accent:#6c5139}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+a{color:inherit}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #a27047;outline-offset:3px}
+.skip{position:absolute;top:-60px;left:12px;background:white;padding:8px}.skip:focus{top:10px}
+.top{background:#1c2530;color:#fff}.top-inner{max-width:1040px;margin:auto;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;padding:16px 22px}.top a{text-decoration:none}.top a:hover{text-decoration:underline}.brand{letter-spacing:.15em;font-weight:700}.links{display:flex;gap:15px;flex-wrap:wrap;font-size:13px}
+main{width:min(1040px,calc(100% - 32px));margin:0 auto 88px}.hero{padding:52px 0 30px;border-bottom:1px solid var(--line)}.eyebrow{font-size:12px;letter-spacing:.15em;color:var(--accent);font-weight:700}.hero h1{font-size:clamp(31px,5vw,55px);line-height:1.23;letter-spacing:-.035em;margin:14px 0}.hero p{max-width:760px;color:var(--muted);font-size:16px}.tag{font-size:13px;color:var(--muted)}
+section{margin-top:36px}h2{font-size:22px;margin:0 0 16px;letter-spacing:-.025em}h3{font-size:16px;margin:0 0 12px}
+.panel{padding:25px;border:1px solid var(--line);background:var(--card);border-radius:12px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.full{grid-column:1/-1}
+label{font-weight:650;display:block;margin-bottom:7px}.hint{font-size:12px;color:var(--muted);margin:4px 0 0}input,textarea,select{width:100%;font:inherit;color:inherit;background:#fff;border:1px solid #b8c0c5;border-radius:7px;padding:11px 12px;min-height:44px}textarea{min-height:84px;resize:vertical}
+.matrix{width:100%;border-collapse:collapse;font-size:14px}.matrix th,.matrix td{padding:12px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}.matrix th{color:var(--muted);font-size:12px}.matrix td:first-child{font-weight:600}.matrix input,.matrix select{min-width:63px;padding:7px 8px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.btn{border:1px solid #27313c;border-radius:7px;padding:11px 18px;min-height:44px;cursor:pointer;background:#fff;font:inherit;font-weight:650}.primary{background:#1d2832;color:#fff}.btn:hover{filter:brightness(.94)}.btn:disabled{opacity:.5;cursor:not-allowed}
+.result{border-left:4px solid #856341;background:#f5f2eb;padding:18px 20px;margin-top:20px}.result strong{font-size:20px}.result p{margin:7px 0;color:#42484e}.muted{color:var(--muted)}.status{min-height:22px;color:#5a462e;font-size:13px}
+.record{display:flex;justify-content:space-between;gap:15px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--line)}.record strong{overflow-wrap:anywhere}.record small{display:block;color:var(--muted)}.record button{flex-shrink:0}.note{background:#f0efec;border:1px solid #e1ded7;border-radius:9px;padding:14px 18px;color:#46525e;font-size:13px}
+footer{background:#1c2530;color:#eee;padding:34px 22px}footer>div{max-width:1040px;margin:auto}footer a{color:#f2e2ce;margin-right:18px;display:inline-block}
+@media(max-width:680px){.hero{padding-top:32px}.grid{grid-template-columns:1fr}.panel{padding:16px}.matrix th,.matrix td{padding:9px 4px}.matrix{font-size:12px}.matrix input,.matrix select{min-width:0;padding:6px 4px;font-size:14px}.matrix td:first-child{width:34%}.record{flex-direction:column}}
+</style></head>
+<body>
+<a class="skip" href="#decision-main">跳到决策表</a>
+<header class="top"><div class="top-inner"><a class="brand" href="index.html">INTJ ATLAS</a><nav class="links" aria-label="站点导航"><a href="index.html">作品图鉴</a><a href="article.html">完整解读</a><a href="plan.html">7/30 天计划</a><a href="pdf/intj-growth-guide-guide.pdf">45 页 PDF</a></nav></div></header>
+<main id="decision-main">
+<section class="hero"><div class="eyebrow">TOOLS / EVIDENCE-FIRST THINKING</div><h1>先找反证，<br>再做决定。</h1><p>当两个选择都合理，别让 INTJ 等人格标签代替事实。把标准、证据和反例写下来，评分只是你自己的偏好记录，不是成功概率，也不是任何人该选什么的判断。</p><div class="tag">免费 · 无账号 · 无服务器传输 · 最近页面更新：2026-11-23</div></section>
+<section aria-labelledby="form-title"><h2 id="form-title">01 / 写下真实问题</h2><form id="decisionForm" class="panel">
+<div class="grid">
+<div class="full"><label for="question">这次具体要决定什么？</label><input id="question" name="question" maxlength="180" minlength="5" required placeholder="例如：是否接受新的岗位机会？"><p class="hint">写可观察、可在一定期限内验证的问题，不录入客户机密或身份证号。</p></div>
+<div><label for="optionA">方案 A</label><input id="optionA" name="optionA" maxlength="70" required placeholder="例如：维持当前岗位"></div>
+<div><label for="optionB">方案 B</label><input id="optionB" name="optionB" maxlength="70" required placeholder="例如：转到新团队"></div>
+<div><label for="evidence">依据链接（可选）</label><input id="evidence" name="evidence" type="url" maxlength="1000" placeholder="https://…"><p class="hint">只允许 HTTPS。链接是你自己提供的依据，不代表本站已核实内容。</p></div>
+<div><label for="falsifier">什么证据会推翻你当前的判断？</label><textarea id="falsifier" name="falsifier" maxlength="700" required placeholder="至少写一条可被检验的反例"></textarea></div>
+<div class="full"><label for="experiment">下一步最小、可逆的验证动作</label><textarea id="experiment" name="experiment" maxlength="700" required placeholder="例如：分别与两位在岗成员核对职责，记录差异"></textarea></div>
+</div>
+<h3>02 / 给两个方案分别赋分</h3><p class="hint">0–5 分，分数越高表示越符合你自己的标准；权重 1–3 倍。必须自行填写全部十项分数。成本和风险项请按“越可承受/越可逆，得分越高”评分。</p>
+<div style="overflow-x:auto"><table class="matrix"><thead><tr><th scope="col">判断维度</th><th scope="col">权重</th><th scope="col">方案 A<br>0–5</th><th scope="col">方案 B<br>0–5</th></tr></thead><tbody id="criteriaRows"></tbody></table></div>
+<div class="actions"><button class="btn primary" type="submit">计算透明比较结果</button><button id="save" class="btn" type="button" disabled>保存本机记录</button><button id="reset" class="btn" type="reset">清空本次输入</button></div>
+<p id="status" class="status" role="status" aria-live="polite"></p><div class="result" id="result" role="region" aria-label="比较结果" hidden></div>
+</form></section>
+<section aria-labelledby="records-title"><h2 id="records-title">03 / 本机决策档案</h2><div class="panel"><p class="muted">最多保存 30 条。你能随时删除或导出 CSV；数据只存储在当前浏览器，清除网站数据后无法恢复。关闭页面不自动上传。</p><div class="actions"><button class="btn" id="export" type="button">导出记录 CSV</button><button class="btn" id="clear" type="button">确认后清空全部</button></div><p id="historyStatus" class="status" role="status" aria-live="polite"></p><div id="records"></div></div></section>
+<section aria-labelledby="boundary-title"><h2 id="boundary-title">使用边界与复核来源</h2><div class="note"><p>这是一套主观多标准比较方法：按你设定的权重与分数计算加权比例。它不提供科学人格测评、录用/收入预测或医疗、法律、金融意见。评分接近时不要强行选择，先执行你写下的最小验证动作。</p><p>方法说明：<a href="docs/SOURCES.md">项目来源与局限</a> · <a href="https://github.com/AIPMAndy/intj-growth-guide" rel="noopener noreferrer" target="_blank">开放源代码与变更记录</a>。页面作者：AI 酋长 Andy；修改于 2026-11-23。外链须自行核对发布日期与适用情况。</p></div></section>
+</main>
+<footer><div><strong>AI 酋长 Andy · 星觉科技</strong><p>微信 AIPMAndy（可手动复制） · 免费内容不要求加微信。</p><p><a href="https://metaver.vip/" rel="noopener noreferrer" target="_blank">个人官网</a><a href="https://www.a6no1.cn/" rel="noopener noreferrer" target="_blank">公司官网</a><a href="https://metaver.vip/services" rel="noopener noreferrer" target="_blank">咨询与陪跑</a><a href="pdf/intj-growth-guide-guide.pdf">45 页 PDF</a></p></div></footer>
+<script defer src="decision.js"></script>
+</body></html>
