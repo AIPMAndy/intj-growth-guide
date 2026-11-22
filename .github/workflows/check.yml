@@ -29,5 +29,8 @@ jobs:
       - name: Verify index.html is up to date
         run: python3 scripts/build.py --check
 
+      - name: Validate decision JavaScript syntax
+        run: node --check decision.js
+
       - name: Run content and site tests
         run: python3 -m unittest discover -s tests -v

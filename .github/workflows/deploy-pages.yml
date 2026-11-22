@@ -30,6 +30,9 @@ jobs:
       - name: Verify index.html is up to date
         run: python3 scripts/build.py --check
 
+      - name: Validate decision JavaScript syntax
+        run: node --check decision.js
+
       - name: Run content and site tests
         run: python3 -m unittest discover -s tests -v
 
@@ -55,3 +58,17 @@ jobs:
       - name: Deploy website
         id: deployment
         uses: actions/deploy-pages@v5
+
+  verify-live:
+    name: Verify public Pages files
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout deployed commit
+        uses: actions/checkout@v7
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+      - name: Check live HTTP and SHA-256
+        run: python3 scripts/verify_live.py

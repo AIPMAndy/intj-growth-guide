@@ -1,0 +1,31 @@
+(()=>{"use strict";
+const fields=["feasibility","value","cost","reversible","evidence"];
+const criteria=[["feasibility","现实可行性"],["value","长期价值"],["cost","资源与时间可承受度"],["reversible","风险可控 / 可逆性"],["evidence","已有证据的可信度"]];
+const q=id=>document.getElementById(id), key="intj-decision-evidence-v1";let last=null;
+const rows=q("criteriaRows");
+for(const [id,label] of criteria){const tr=document.createElement("tr");const th=document.createElement("td");th.textContent=label;tr.append(th);
+const wd=document.createElement("td"),w=document.createElement("select");w.id="w-"+id;w.setAttribute("aria-label",label+"权重");for(let n=1;n<=3;n++){const o=document.createElement("option");o.value=String(n);o.textContent=String(n);if(n===1)o.selected=true;w.append(o)}wd.append(w);tr.append(wd);
+for(const prefix of ["a","b"]){const td=document.createElement("td"),x=document.createElement("input");x.id=prefix+"-"+id;x.type="number";x.step="1";x.min="0";x.max="5";x.required=true;x.placeholder="0–5";x.setAttribute("aria-label",label+"方案"+prefix.toUpperCase()+"评分");td.append(x);tr.append(td)}rows.append(tr)}
+const txt=id=>q(id).value.trim();
+function validHttps(value){if(!value)return true;try{const url=new URL(value);return url.protocol==="https:"&&!!url.hostname}catch(_){return false}}
+function calculate(){const a=[],b=[],w=[];for(const id of fields){const weight=Number(q("w-"+id).value),aa=q("a-"+id).value,bb=q("b-"+id).value,an=Number(aa),bn=Number(bb);
+if(aa===""||bb===""||!Number.isInteger(an)||!Number.isInteger(bn)||an<0||an>5||bn<0||bn>5||weight<1||weight>3)throw Error("每个评分需填写 0–5 的整数，权重为 1–3");a.push(an);b.push(bn);w.push(weight)}
+const total=w.reduce((x,y)=>x+y,0)*5,sa=a.reduce((s,v,i)=>s+v*w[i],0),sb=b.reduce((s,v,i)=>s+v*w[i],0);
+return {aScore:Math.round(sa/total*1000)/10,bScore:Math.round(sb/total*1000)/10,weights:w,a,b}}
+function list(){try{const data=JSON.parse(localStorage.getItem(key)||"[]");return Array.isArray(data)?data.slice(0,30).filter(x=>x&&typeof x==="object"):[]}catch(_){return []}}
+function store(data){localStorage.setItem(key,JSON.stringify(data))}
+function notify(id,value){q(id).textContent=value}
+function show(entry){const box=q("result");box.replaceChildren();const h=document.createElement("strong");h.textContent=entry.optionA+"："+entry.aScore+" / 100；"+entry.optionB+"："+entry.bScore+" / 100";const p=document.createElement("p");const diff=Math.abs(entry.aScore-entry.bScore);p.textContent=diff<5?"差距小于 5 分：目前视作难以区分。先补反证，再决定。":"主观比较中"+(entry.aScore>entry.bScore?entry.optionA:entry.optionB)+"得分更高（差 "+diff.toFixed(1)+" 分）。它不是结果概率，也不能证明因果。";const e=document.createElement("p");e.textContent="推翻条件："+entry.falsifier;const n=document.createElement("p");n.textContent="下一步验证："+entry.experiment;box.append(h,p,e,n);box.hidden=false}
+q("decisionForm").addEventListener("submit",ev=>{ev.preventDefault();if(!q("decisionForm").reportValidity())return;if(!validHttps(txt("evidence"))){notify("status","依据只允许 HTTPS 地址");return}
+try{const s=calculate();last={question:txt("question"),optionA:txt("optionA"),optionB:txt("optionB"),evidence:txt("evidence"),falsifier:txt("falsifier"),experiment:txt("experiment"),...s};show(last);q("save").disabled=false;notify("status","已计算：所有分数均来自你的输入，尚未保存。")}catch(err){notify("status",err.message)}});
+q("decisionForm").addEventListener("reset",()=>{last=null;q("save").disabled=true;q("result").hidden=true;notify("status","本次输入已清空，历史记录未删除。")});
+q("decisionForm").addEventListener("input",()=>{last=null;q("save").disabled=true;q("result").hidden=true});
+q("save").addEventListener("click",()=>{if(!last){notify("status","请先完成计算");return}try{const data=list();if(data.length>=30){notify("status","已达到 30 条上限，请先导出并删除旧记录。");return}data.unshift({...last,id:String(Date.now())+"-"+String(Math.round(Math.random()*1e6)),created:new Date().toISOString()});store(data);notify("status","已保存到当前浏览器。");render()}catch(_){notify("status","本机存储不可用，请使用 CSV 导出；未保存成功。")}});
+function render(){const dest=q("records");dest.replaceChildren();const data=list();if(!data.length){const p=document.createElement("p");p.className="muted";p.textContent="暂无本机记录";dest.append(p);return}
+data.forEach(record=>{const row=document.createElement("div");row.className="record";const info=document.createElement("div"),title=document.createElement("strong");title.textContent=String(record.question||"未命名决策");const sub=document.createElement("small");sub.textContent=String(record.created||"").slice(0,10)+" · "+record.optionA+" "+record.aScore+" / "+record.optionB+" "+record.bScore;const evidence=document.createElement("small");evidence.textContent="反证："+String(record.falsifier||"");info.append(title,sub,evidence);const btn=document.createElement("button");btn.type="button";btn.className="btn";btn.textContent="删除";btn.setAttribute("aria-label","删除记录："+record.question);btn.addEventListener("click",()=>{if(!confirm("确定删除这条本机决策记录？"))return;try{store(list().filter(x=>x.id!==record.id));render();notify("historyStatus","已删除一条本机记录")}catch(_){notify("historyStatus","删除失败：浏览器存储不可用")}});row.append(info,btn);dest.append(row)})}
+function csvCell(v){let s=String(v??"");if(/^[\s]*[=+\-@]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"'}
+q("export").addEventListener("click",()=>{const data=list();if(!data.length){notify("historyStatus","暂无记录可以导出");return}const cols=["created","question","optionA","optionB","aScore","bScore","evidence","falsifier","experiment"];const csv="\uFEFF"+[cols.join(","),...data.map(row=>cols.map(c=>csvCell(row[c])).join(","))].join("\r\n");const url=URL.createObjectURL(new Blob([csv],{type:"text/csv;charset=utf-8"}));const a=document.createElement("a");a.href=url;a.download="INTJ-决策反证记录.csv";document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);notify("historyStatus","已发起 CSV 下载，请自行妥善保管。")});
+q("clear").addEventListener("click",()=>{if(!list().length)return;if(!confirm("永久清空当前浏览器内全部决策记录？不可恢复。"))return;try{store([]);render();notify("historyStatus","全部本机记录已清空")}catch(_){notify("historyStatus","清空失败：浏览器存储不可用")}});
+q("copyWechat").addEventListener("click",async()=>{try{await navigator.clipboard.writeText("AIPMAndy");notify("copyState","已复制微信号")}catch(_){notify("copyState","自动复制失败，请手动复制 AIPMAndy")}});
+render();
+})();
