@@ -1,0 +1,57 @@
+# INTJ 成长必看书影音图鉴
+
+> INTJ 成长必看：41 部电影、剧集、书籍与纪录片，六条成长路线，每条都配一个能立刻执行的练习。免费开源，可在线检索、勾选进度。
+
+- 作者：AI酋长Andy（AIPMAndy），官网 https://metaver.vip/
+- 开源仓库：https://github.com/AIPMAndy/intj-growth-guide
+- 在线地址：https://aipmandy.github.io/intj-growth-guide/
+- 许可：MIT
+- 语言：中文（zh-CN）
+- 最近更新：2026-11-22
+
+## 这是什么
+
+免费下载《INTJ 成长书影音图鉴》pdf/intj-growth-guide-guide.pdf · 直接下载 PDFhttps://github.com/AIPMAndy/intj-growth-guide/raw/refs/heads/main/pdf/intj-growth-guide-guide.pdf
+45 页 · A5 手机阅读版 · 可点击目录 · 0.70 MB  
+整理日期：2026-11-13。包含完整实操正文、案例、模板与原始来源；平台规则与价格沿用原资料的核查日期。
+
+## 主要页面
+
+- [41 部作品完整攻略 · INTJ 成长必看书影音图鉴](https://aipmandy.github.io/intj-growth-guide/article.html)
+- [决策反证工作台｜INTJ ATLAS · AI 酋长 Andy](https://aipmandy.github.io/intj-growth-guide/decision.html)
+- [INTJ 成长必看书影音图鉴｜AI 酋长 Andy](https://aipmandy.github.io/intj-growth-guide/)
+- [7 天与 30 天成长计划 · INTJ ATLAS](https://aipmandy.github.io/intj-growth-guide/plan.html)
+- [INTJ 成长必看书影音图鉴｜AI 酋长 Andy](https://aipmandy.github.io/intj-growth-guide/site/template.html)
+
+## 内容目录
+
+- 精美 PDF 电子书
+- 目录
+- 在线阅读
+- 清单概览
+- 怎么用
+- 配套资源
+- 项目结构
+- 本地开发
+- 技术选择
+- 参与共建
+- 人格类型与版权
+- 说明
+- 作者 / About the author
+
+## 关键事实
+
+- 名称：INTJ 成长必看书影音图鉴
+- 类型：中文开源项目 / 学习手册
+- 内容规模：20 章
+- 许可：MIT
+- 语言：中文
+- 最近更新：2026-11-22
+- 仓库：https://github.com/AIPMAndy/intj-growth-guide
+
+## 相关链接
+
+- [作者官网](https://metaver.vip/)
+- [GitHub 主页](https://github.com/AIPMAndy/AIPMAndy)
+- [开源总目录](https://aipmandy.github.io/)
+- [机器可读摘要](https://aipmandy.github.io/intj-growth-guide/llms.txt)
